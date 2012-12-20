@@ -69,12 +69,12 @@ stagePrincipal = application(title: 'Servicio Gestion de Documentos', sizeToScen
                 }
             }
             splitPane(dividerPositions: 0.2725250278086763, focusTraversable: true, pickOnBounds: true, prefHeight: 496.0, prefWidth: 400.0, bottomAnchor: 0.0, leftAnchor: -1.0, rightAnchor: 0.0, topAnchor: 104.0) {
-               // accordion(id:'accordion',maxWidth: 290.0, minWidth: 242.0) {
-                   // titledPane(animated = true, text: "Taxonomia",maxWidth: 290.0, minWidth: 242.0) {
-                  //      anchorPane(maxWidth: 240.0, minHeight: 0.0, minWidth: 242.0, prefHeight: 160.0, prefWidth: 242.0) {
-                  //      }
-                  //  }
-                  //  titledPane(id:'documentsTitled',animated: true, text: "Documentos",expanded: true,maxWidth: 290.0, minWidth: 242.0) {
+                accordion(id:'accordion',maxWidth: 290.0, minWidth: 242.0) {
+                    titledPane(animated = true, text: "Taxonomia",maxWidth: 290.0, minWidth: 242.0) {
+                        anchorPane(maxWidth: 240.0, minHeight: 0.0, minWidth: 242.0, prefHeight: 160.0, prefWidth: 242.0) {
+                        }
+                    }
+                    titledPane(id:'documentsTitled',animated: true, text: "Documentos",expanded: true,maxWidth: 290.0, minWidth: 242.0) {
                         anchorPane(maxWidth: 240.0, minHeight: 0.0, minWidth: 242.0, prefHeight: 160.0, prefWidth: 242.0) {
                             treeView(id: 'arbol',  prefHeight: 766.0, prefWidth: 242.0, bottomAnchor: 0.0, leftAnchor: 0.0, topAnchor: 0.0, onMouseClicked: controller.treeMouse, onEditCancel: controller.cancelarTree, onEditCommit: controller.commitTree) {
                                 treeItem(value: model.path.substring(14), graphic: new ImageView(model.rootIcon), expanded: true) {
@@ -84,9 +84,9 @@ stagePrincipal = application(title: 'Servicio Gestion de Documentos', sizeToScen
                                 }
                             }
                         }
-                 //   }
-                   // accordion.setExpandedPane(documentsTitled)
-             //   }
+                    }
+                    accordion.setExpandedPane(documentsTitled)
+                }
                 anchorPane(id: 'anchorTabla', minHeight: 340, minWidth: 0.0, prefHeight: 494.0, prefWidth: 639.0) {
                     tableView(id: "tabla", minHeight: 340, prefHeight: 494.0, prefWidth: 562.0, bottomAnchor: 0.0, leftAnchor: 0.0, rightAnchor: 0.0, topAnchor: 0.0, tableMenuButtonVisible: true, onMouseClicked: controller.tableMouse) {
                         tabla.setItems(model.tablaItems)
