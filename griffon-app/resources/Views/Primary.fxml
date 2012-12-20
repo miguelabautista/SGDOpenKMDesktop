@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <AnchorPane id="AnchorPane" prefHeight="105.0" prefWidth="800.0" style="-fx-background-color:gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <Text fill="#0066ff" layoutX="14.0" layoutY="46.0" stroke="BLACK" strokeLineCap="BUTT" strokeType="OUTSIDE" strokeWidth="0.0" text="Servicio de gestion documental">
+          <effect>
+            <Bloom threshold="0.0">
+              <input>
+                <DropShadow spread="0.5793650793650794">
+                  <input>
+                    <Lighting diffuseConstant="0.5873015873015873" specularConstant="0.22063492063492063" specularExponent="29.206349206349206" surfaceScale="0.9444444444444444">
+                      <bumpInput>
+                        <Shadow />
+                      </bumpInput>
+                      <light>
+                        <javafx.scene.effect.Light.Distant />
+                      </light>
+                    </Lighting>
+                  </input>
+                </DropShadow>
+              </input>
+            </Bloom>
+          </effect>
+          <font>
+            <Font name="System Bold" size="30.0" />
+          </font>
+        </Text>
+        <HBox id="HBox" alignment="CENTER" layoutY="74.0" prefWidth="843.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="57.0">
+          <children>
+            <ToolBar cache="true" cacheHint="SPEED" prefWidth="801.0" HBox.hgrow="ALWAYS">
+              <items>
+                <Button minWidth="11.0" mnemonicParsing="false" prefWidth="27.0" visible="false" />
+                <Button id="addNewFolderButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false">
+                  <tooltip>
+                    <Tooltip text="Agregar un nuevo directorio" />
+                  </tooltip>
+                </Button>
+                <Button id="deleteFolderButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false">
+                  <tooltip>
+                    <Tooltip text="Eliminar directorio" />
+                  </tooltip>
+                </Button>
+                <Button id="newFileInFolderButton" mnemonicParsing="false">
+                  <tooltip>
+                    <Tooltip text="Nuevo Archivo" />
+                  </tooltip>
+                </Button>
+                <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="63.0" />
+                <Button mnemonicParsing="false" visible="false" />
+                <Button id="searchingFilesButton" mnemonicParsing="false" onAction="#busquedaButtonAction" text="Busqueda" />
+                <Button mnemonicParsing="false" visible="false" />
+                <Separator orientation="VERTICAL" prefHeight="21.0" prefWidth="38.0" />
+                <Button mnemonicParsing="false" visible="false" />
+                <Button id="downloadFileButton" mnemonicParsing="false" text="Descargar" />
+                <Button id="addTagsFileButton" mnemonicParsing="false" text="Palabras Claves" />
+                <Button id="eraseFileButton" mnemonicParsing="false" text="Eliminar" />
+                <Button id="renameFileButton" mnemonicParsing="false" text="Renombrar" visible="false" />
+              </items>
+            </ToolBar>
+          </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutY="74.0" prefWidth="57.0" spacing="5.0" AnchorPane.rightAnchor="0.0">
+          <children>
+            <ToolBar prefWidth="79.0" HBox.hgrow="ALWAYS">
+              <items>
+                <Button mnemonicParsing="false" text="Button" />
+              </items>
+            </ToolBar>
+          </children>
+        </HBox>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-2.0">
+          <children>
+            <Hyperlink text="Hyperlink" />
+            <Hyperlink text="Hyperlink" />
+            <Hyperlink text="Hyperlink" />
+          </children>
+        </VBox>
+        <ImageView id="logo" fitHeight="62.0" fitWidth="106.0" layoutX="586.0" layoutY="5.0" pickOnBounds="true">
+          <image>
+            <Image url="@../logo.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+      </children>
+    </AnchorPane>
+    <SplitPane dividerPositions="0.2725250278086763" focusTraversable="true" maxWidth="-Infinity" minWidth="-Infinity" mouseTransparent="true" pickOnBounds="true" prefHeight="496.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
+      <items>
+        <AnchorPane maxWidth="240.0" minHeight="0.0" minWidth="242.0" prefHeight="160.0" prefWidth="242.0">
+          <children>
+            <TreeView maxWidth="290.0" minWidth="242.0" prefHeight="766.0" prefWidth="242.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="494.0" prefWidth="639.0">
+          <children>
+            <TableView prefHeight="494.0" prefWidth="562.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn maxWidth="30.0" prefWidth="30.0" resizable="false" />
+                <TableColumn maxWidth="300.0" minWidth="180.0" prefWidth="180.0" text="Nombre" />
+                <TableColumn maxWidth="90.0" minWidth="90.0" prefWidth="90.0" resizable="false" text="Tamaño" />
+                <TableColumn maxWidth="180.0" minWidth="130.0" prefWidth="130.0" text="Fecha creacion" />
+                <TableColumn maxWidth="180.0" minWidth="130.0" prefWidth="130.0" text="Fecha modificacion" />
+              </columns>
+            </TableView>
+            <ProgressIndicator fx:id="progress" prefHeight="81.0" prefWidth="77.0" visible="false" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="288.0" AnchorPane.rightAnchor="286.0" AnchorPane.topAnchor="238.0" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

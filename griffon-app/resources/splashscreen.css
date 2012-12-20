@@ -1,0 +1,17 @@
+#splashscreen {
+    -fx-background-image: url('./logo.png');
+    -fx-background-repeat:no-repeat;
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+    -fx-border-width: 2; 
+    -fx-border-color: black;
+    -fx-border-radius: 30;
+}
+
+#status {
+}
+
+#logo {
+    -fx-background: url('./logo.png');
+    -fx-background-repeat:no-repeat;
+}

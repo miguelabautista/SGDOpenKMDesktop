@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="157.0" prefWidth="325.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <TitledPane id="panelFrontal" collapsible="false" layoutY="-31.0" minWidth="180.0" prefHeight="188.0" prefWidth="325.0" text="Aviso">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="92.0" prefWidth="176.0">
+          <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Seleccione archivo" />
+            <HBox id="HBox" alignment="CENTER" layoutX="99.0" layoutY="127.0" spacing="5.0">
+              <children>
+                <Button id="aceptarRutaDescarga" text="Aceptar" />
+                <Button id="cancelarRutaDescarga" onAction="#noButtonRutaDescarga" text="Cancelar" />
+              </children>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER" layoutX="28.0" layoutY="42.0" spacing="5.0">
+              <children>
+                <TextField id="rutaDescarga" prefWidth="198.0" />
+                <Button id="modificarRutaDescarga" text="Modificar" />
+              </children>
+            </HBox>
+            <Label layoutX="14.0" layoutY="81.0" text="Comentario" />
+            <TextArea layoutX="77.0" layoutY="77.0" prefHeight="38.0" prefWidth="211.0" wrapText="true" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>

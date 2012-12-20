@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="667.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <TitledPane id="atributosPanel" collapsible="false" prefHeight="180.0" prefWidth="667.0" text="Atributos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <content>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab text="Propiedades">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <AnchorPane id="Content" layoutX="9.0" layoutY="6.0" minHeight="0.0" minWidth="0.0" prefHeight="111.0" prefWidth="237.0">
+                      <children>
+                        <Label layoutX="14.0" layoutY="20.0" text="Nombre:" />
+                        <TextField id="nombreDocumentoText" disable="true" layoutX="69.0" layoutY="14.0" prefWidth="159.0" />
+                        <Label layoutX="15.0" layoutY="55.0" text="Tamaño:" />
+                        <Label id="tamanoLabel" layoutX="74.0" layoutY="53.0" prefWidth="153.99990000000253" />
+                        <Label layoutX="264.0" layoutY="16.0" text="Palabras Clave:" />
+                        <ListView id="bookmarksList" layoutX="357.0" layoutY="13.0" onMouseClicked="#bookmarkSelected" prefHeight="97.0" prefWidth="200.0" />
+                        <Label layoutX="14.0" layoutY="84.0" text="Checkout:" />
+                        <Label layoutX="74.0" layoutY="84.0" prefWidth="79.0" />
+                      </children>
+                    </AnchorPane>
+                    <Button id="borrarBookmarkButton" contentDisplay="GRAPHIC_ONLY" layoutX="573.0" layoutY="98.0" minHeight="16.0" minWidth="15.0" mnemonicParsing="false" onAction="#borrarBookmarkEnLista" prefHeight="16.0" prefWidth="16.0" visible="false" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Notas">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Historial">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TableView layoutX="14.0" layoutY="9.0" prefHeight="100.0" prefWidth="635.0">
+                      <columns>
+                        <TableColumn prefWidth="75.0" text="Version" />
+                        <TableColumn maxWidth="140.0" minWidth="100.0" prefWidth="130.0" text="Fecha" />
+                        <TableColumn maxWidth="100.0" minWidth="90.0" prefWidth="100.0" text="Tamaño" />
+                        <TableColumn maxWidth="90.0" minWidth="90.0" prefWidth="90.0" />
+                      </columns>
+                    </TableView>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>

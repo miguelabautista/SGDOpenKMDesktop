@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="212.0" prefWidth="325.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <TitledPane id="panelFrontal" collapsible="false" minWidth="180.0" prefHeight="212.0" prefWidth="325.0" text="Aviso">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="196.0" prefWidth="321.0">
+          <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Agregar palabras claves" />
+            <HBox id="HBox" alignment="CENTER" layoutX="175.0" layoutY="150.0" spacing="5.0">
+              <children>
+                <Button id="aceptarRutaDescarga" onAction="#aceptarBookmarkAction" text="Aceptar" />
+                <Button id="cancelarRutaDescarga" onAction="#cancelarBookmarkAction" text="Cancelar" />
+              </children>
+            </HBox>
+            <ListView id="Bookmarks" layoutX="64.0" layoutY="83.0" prefHeight="49.0" prefWidth="194.0" />
+            <HBox id="HBox" alignment="CENTER" layoutX="64.0" layoutY="41.0" spacing="5.0">
+              <children>
+                <TextField id="agregarBookmark" onAction="#agregarBookmarkAction" prefWidth="158.0" />
+                <Button id="agregarButtonBookmark" mnemonicParsing="false" onAction="#agregarBookmarkAction" text="Agregar" />
+              </children>
+            </HBox>
+            <Button id="deleteBookmark" contentDisplay="GRAPHIC_ONLY" layoutX="266.0" layoutY="111.0" minWidth="17.0" mnemonicParsing="false" onAction="#deleteBookmarkAction" prefWidth="17.0" text="Button" visible="false" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>

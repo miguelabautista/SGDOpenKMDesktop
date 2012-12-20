@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="146.0" prefWidth="274.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <TitledPane animated="false" collapsible="false" layoutX="-2.0" minWidth="278.0" prefHeight="146.0" prefWidth="278.0" text="Cambiar nombre archivo">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="275.0">
+          <children>
+            <TextField layoutX="37.0" layoutY="39.0" prefWidth="200.0" />
+            <HBox id="HBox" alignment="CENTER" layoutX="118.0" layoutY="82.0" spacing="5.0">
+              <children>
+                <Button text="_Aceptar" />
+                <Button text="_Cancelar" />
+              </children>
+            </HBox>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+</AnchorPane>
